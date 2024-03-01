@@ -12,15 +12,15 @@ func (c Cake) Deliver() {
 }
 
 // NewCake creates a new cake and applies decorators to it.
-func NewCake(name string, decorators ...Options) Delivery {
+func NewCake(name string, option ...Options) Delivery {
 	cake := &Cake{name: name}
 
 	var delivery Delivery
 
 	delivery = cake
 
-	for _, decorator := range decorators {
-		delivery = decorator.apply(delivery)
+	for _, o := range option {
+		delivery = o.apply(delivery)
 	}
 
 	return delivery

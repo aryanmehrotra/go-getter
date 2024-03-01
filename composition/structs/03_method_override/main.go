@@ -20,5 +20,5 @@ func (Derived) Describe() {
 
 func main() {
 	d := Derived{}
-	d.Describe() // Calls Derived's Describe, not Base's
+	d.Describe()
 }

@@ -16,5 +16,4 @@ func (f *Frosting) apply(delivery Delivery) Delivery {
 func (d *FrostedCake) Deliver() {
 	fmt.Println(d.decoration)
 	d.delivery.Deliver()
-
 }
